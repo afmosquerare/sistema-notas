@@ -133,9 +133,9 @@ export default function App() {
 
 
     <View style={styles.inputsContainer}>
-    {identificacion.error && <Text style={{color:'red', fontSize:10}}>{identificacion.error}</Text>}
       <View>
     <Text style={styles.text}>Identificacion : </Text>
+    {identificacion.error && <Text style={{color:'red', fontSize:10}}>{identificacion.error}</Text>}
       </View>
 
     <TextInput 
@@ -154,9 +154,9 @@ export default function App() {
 
 
     <View style={styles.inputsContainer}>
-    {nombres.error && <Text style={{color:'red', fontSize:10}}>{nombres.error}</Text>}
     <View>
     <Text style={styles.text}>Nombres : </Text>
+    {nombres.error && <Text style={{color:'red', fontSize:10}}>{nombres.error}</Text>}
     </View>
 
     <TextInput 
@@ -177,10 +177,10 @@ export default function App() {
 
 
     <View style={styles.inputsContainer}>
-    {asignatura.error && <Text style={{color:'red', fontSize:10}}>{asignatura.error}</Text>}
     
     <View>
     <Text style={styles.text}>Asignatura : </Text>
+    {asignatura.error && <Text style={{color:'red', fontSize:10}}>{asignatura.error}</Text>}
     </View>
 
     <TextInput 
@@ -213,8 +213,8 @@ export default function App() {
         setNota1(() => ({ error: "Campo requerido.", value: '' }));
       }
       else if(Number(e.target.value) > 5 || Number(e.target.value) < 0){
-        setNota1({value: Number(e.target.value) > 5 ? '0' : '0'});
-        alert('Los numeros deben ser mayores o iguales a 0 y menores o iguales a 5');
+        setNota1({value: Number(e.target.value) > 5 ? '5' : '0'});
+        alert('El rango debe ser de 0 - 5');
       }
       else {
         setNota1({value: e.target.value})
@@ -232,9 +232,9 @@ export default function App() {
 
     <View style={styles.inputsContainer}>
     
-    {nota2.error && <Text style={{color:'red', fontSize:10}}>{nota2.error}</Text>}
     <View>
     <Text style={styles.text}>Nota 2 : </Text>
+    {nota2.error && <Text style={{color:'red', fontSize:10}}>{nota2.error}</Text>}
     </View>
 
     <TextInput 
@@ -245,8 +245,8 @@ export default function App() {
         setNota2(() => ({ error: "Campo requerido.", value: '' }));
       }
       else if(Number(e.target.value) > 5 || Number(e.target.value) < 0){
-        setNota2({value: Number(e.target.value) > 5 ? '0' : '0'});
-        alert('Los numeros deben ser mayores o iguales a 0 y menores o iguales a 5');
+        setNota2({value: Number(e.target.value) > 5 ? '5' : '0'});
+        alert('El rango debe ser de 0 - 5');
       }
       else {
         setNota2({value: e.target.value})
@@ -259,10 +259,10 @@ export default function App() {
     </View>
 
     <View style={styles.inputsContainer}>
-    {nota3.error && <Text style={{color:'red', fontSize:10}}>{nota3.error}</Text>}
     
     <View>
     <Text style={styles.text}>Nota 3 : </Text>
+    {nota3.error && <Text style={{color:'red', fontSize:10}}>{nota3.error}</Text>}
     </View>
 
     <TextInput 
@@ -273,8 +273,8 @@ export default function App() {
         setNota3(() => ({ error: "Campo requerido.", value: '' }));
       }
       else if(Number(e.target.value) > 5 || Number(e.target.value) < 0){
-        setNota3({value: Number(e.target.value) > 5 ? '0' : '0'});
-        alert('Los numeros deben ser mayores o iguales a 0 y menores o iguales a 5');
+        setNota3({value: Number(e.target.value) > 5 ? '5' : '0'});
+        alert('El rango debe ser de 0 - 5');
       }
       else {
         setNota3({value: e.target.value})
@@ -327,7 +327,7 @@ export default function App() {
   const styles = StyleSheet.create({
     container: {
     flex: 1,
-    backgroundColor: '#252525',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'start  ',
     gap: 10 
